@@ -51,6 +51,16 @@ class Salida
 		$patente_camion,$patente_carro,$is_factura,$observacion);";
 		$db->query($sql);
 	}
+
+
+
+
+	public function eliminar(){
+			$db = new mysqli("localhost", 'root','','novox');
+			$id = $this->id;
+			echo $sql=" DELETE FROM `salida` where id = $id";
+			$db->query($sql);
+		}
 }
 
 ?>
