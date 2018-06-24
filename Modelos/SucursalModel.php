@@ -8,7 +8,7 @@
 			$cliente = $_POST['cliente'];
 			$sucursal = new Sucursal("0",$nombre,$direccion,$cliente);
 			$sucursal->guardar();
-			echo 'pase por aqui';
+		
 		}elseif ($action == 'editar') {
 			$id = $_POST['id'];
 			$nombre = $_POST['nombre'];

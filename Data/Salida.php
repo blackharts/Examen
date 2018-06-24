@@ -48,12 +48,12 @@ class Salida
 		$is_factura=$this->is_factura;
 		$observacion=$this->observacion;
 		$user=$this->user;
-		
-		echo $sql=" INSERT INTO salida (sucursal_id, responsable_id, tipo_gas_id, salida_tipo_id, cliente_id, total_cilindros, patente_camion
+		$sql=" INSERT INTO salida (sucursal_id, responsable_id, tipo_gas_id, salida_tipo_id, cliente_id, total_cilindros, patente_camion
 		, patente_carro, is_facturado, observacion, user_id) VALUES ('$sucursal_id','$responsable_id','$tipogas','$salida_tipo','$cliente',
 		'$cilindros',
 		'$patente_camion','$patente_carro','$is_factura','$observacion','$user');";
 		$db->query($sql);
+		echo "Se Han Guardado los Datos";
 	}
 	public function editar(){
 		$db= new mysqli("localhost",'root','','novox');
@@ -70,15 +70,17 @@ class Salida
 		$observacion=$this->observacion;
 		$user=$this->user;
 		$sql=" UPDATE `salida` set sucursal_id = '$sucursal_id' ,responsable_id = '$responsable_id', cliente_id='$cliente', tipo_gas_id = '$tipogas' ,salida_tipo_id = '$salida_tipo', total_cilindros='$cilindros',patente_carro = '$patente_carro' ,patente_camion = '$patente_camion', is_facturado='$is_factura',observacion = '$observacion' ,user_id = '$user' where id = '$id'";
-			echo $db->query($sql);
+		$db->query($sql);
+		echo "Se Han editado los Datos";
 
 	}
 
 	public function eliminar(){
 			$db = new mysqli("localhost", 'root','','novox');
 			$id = $this->id;
-			echo $sql=" DELETE FROM salida where id = $id";
+			$sql=" DELETE FROM salida where id = $id";
 			$db->query($sql);
+			echo "Se Han eliminado los Datos";
 		}
 }
 

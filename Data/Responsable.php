@@ -24,8 +24,9 @@ class Responsable
 		$rut=$this->rut;
 		$nombre=$this->nombre;
 		$cliente_id=$this->cliente_id;
-		echo $sql=" INSERT INTO `responsable` (nombre,rut,cliente_id) VALUES ( '$nombre','$rut','$cliente_id');";
+		$sql=" INSERT INTO `responsable` (nombre,rut,cliente_id) VALUES ( '$nombre','$rut','$cliente_id');";
 		$db->query($sql);
+		echo "Se Han Guardado los Datos";
 	}
 
 		public function editar(){
@@ -35,15 +36,17 @@ class Responsable
 		$nombre=$this->nombre;
 		$cliente_id=$this->cliente_id;
 		$sql=" UPDATE `responsable` set nombre = '$nombre' ,rut = '$rut', cliente_id='$cliente_id' where id = '$id'";
-			echo $db->query($sql);
+		$db->query($sql);
+		echo "Se Han editado los Datos";
 
 	}
 
 	public function eliminar(){
 			$db = new mysqli("localhost", 'root','','novox');
 			$id = $this->id;
-			echo $sql=" DELETE FROM responsable where id = $id";
+			$sql=" DELETE FROM responsable where id = $id";
 			$db->query($sql);
+			echo "Se Han eliminado los Datos";
 		}
 
 

@@ -8,7 +8,7 @@
 			$cliente_id = $_POST['cliente'];
 			$responsable = new Responsable("0",$cliente_id,$nombre,$rut);
 			$responsable->guardar();
-			echo 'pase por aqui';
+			
 		}elseif ($action == 'editar') {
 			$id = $_POST['id'];
 			$nombre = $_POST['nombre'];

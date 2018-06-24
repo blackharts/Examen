@@ -20,7 +20,7 @@ class TipoGas
 		$sql="INSERT INTO tipo_gas (  nombre ) VALUES
 		( '$nombre' );";
 		$db->query($sql);
-		echo "Se ha registrado la informacion",$sql;
+		echo "Se ha registrado la informacion";
 
 	}
 	public function editar(){
@@ -28,15 +28,17 @@ class TipoGas
 		$id=$this->id;
 		$nombre=$this->nombre;
 		$sql=" UPDATE `tipo_gas` set nombre = '$nombre' where id = '$id'";
-			echo $db->query($sql);
+		$db->query($sql);
+		echo "Se Han editado los Datos";
 
 	}
 
 	public function eliminar(){
 			$db = new mysqli("localhost", 'root','','novox');
 			$id = $this->id;
-			echo $sql=" DELETE FROM `tipo_gas` where id = $id";
+			$sql=" DELETE FROM `tipo_gas` where id = $id";
 			$db->query($sql);
+			echo "Se Han eliminado los Datos";
 		}
 }
 

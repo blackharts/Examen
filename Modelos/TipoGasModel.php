@@ -6,7 +6,7 @@
 			$nombre = $_POST['tipogas'];
 			$tipogas = new TipoGas("0",$nombre);
 			$tipogas->guardar();
-			echo 'pase por aqui';
+			
 		}elseif ($action == 'editar') {
 			$id = $_POST['id'];
 			$nombre = $_POST['tipogas'];

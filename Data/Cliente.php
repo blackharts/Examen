@@ -47,6 +47,7 @@ class Cliente
 		$habilitado_venta=$this->habilitado_venta;
 		$sql=" INSERT INTO `cliente` (nombre,rut,razon_social,direccion,fono,fax,giro,limite_credito,ciudad_id,habilitado_venta) VALUES ( '$nombre','$rut','$razon_social','$direccion','$fono','$fax','$giro','$limite_credito','$ciudad' ,'$habilitado_venta');";
 		$db->query($sql);
+		echo "Se Han Guardado los Datos";
 	}
 
 }

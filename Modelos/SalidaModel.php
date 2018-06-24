@@ -18,7 +18,7 @@
 			,$patente_carro,$is_factura,$observacion,$user);
 			
 			$salida->guardar();
-			echo 'pase por aqui';
+			
 		}elseif ($action == 'editar') {
 			$id = $_POST['id'];
 			$sucursal_id = $_POST['sucursal'];
