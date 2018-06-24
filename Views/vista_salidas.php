@@ -1,7 +1,7 @@
 <table class="table">
   <thead>
     <tr>
-      
+      <th scope="col">Id</th>
       <th scope="col">Sucursal</th>
       <th scope="col">Responsable</th>
       <th scope="col">Cliente </th>
@@ -24,9 +24,9 @@
     $db = new mysqli("localhost", 'root','','novox');
    
    
-   $sql=" Select sucursal.nombre as suc , responsable.nombre as respons , tipo_gas.nombre as gas,salida_tipo.nombre as tipo,
+   $sql=" Select salida.id,sucursal.nombre as suc , responsable.nombre as respons , tipo_gas.nombre as gas,salida_tipo.nombre as tipo,
     sucursal.cliente_id as client, salida.total_cilindros as cilindro, salida.patente_camion as camion, salida.patente_carro as carro,
-    salida.observacion as obs, salida.is_facturado as factura
+    salida.observacion as obs, salida.is_facturado as factura,salida.id
      from salida  
      join responsable on  salida.responsable_id = responsable.id 
      join sucursal on sucursal.id = salida.sucursal_id
@@ -38,7 +38,7 @@
        
  ?>
     <tr>
-      
+      <td><?=$reg->id?></td>
       <td><?=$reg->suc?></td>
       <td><?=$reg->respons?></td>
      <td><?=$reg->client?></td>
@@ -50,8 +50,8 @@
       <td><?=$reg->factura?></td>
       <td><?=$reg->obs?></td>
       <td>
-        <a href= "?url=persona_editar&id=<?=$reg->id?>" class="btn btn-outline-primary bt_editar"> Editar </a>
-        <button  type="button" class="btn btn-outline-danger bt_eliminar" client.id ="<?=$reg->id?>">Eliminar</button>
+        <a href= "?url=salida_editar&id=<?=$reg->id?>" class="btn btn-outline-primary btn-sm bt_editar"> Editar </a>
+        <button  type="button" class="btn btn-outline-danger btn-sm bt_eliminar" client.id ="<?=$reg->id?>">Eliminar</button>
       
       </td>
     </tr>
@@ -73,7 +73,7 @@
                     data: {id:id_capt},
                     success: function (data) {
                         alert(data);
-                       // location.reload();
+                        location.reload();
 
 
                     },

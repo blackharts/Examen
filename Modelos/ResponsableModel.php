@@ -18,7 +18,7 @@
 			$responsable->editar();
 		}elseif ($action == 'eliminar') {
 			$id = $_POST['id'];
-			$responsable = new Responsable($id,'');
+			$responsable = new Responsable($id,'','','');
 			$responsable->eliminar();
 		}
 

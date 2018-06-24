@@ -28,6 +28,24 @@ class Responsable
 		$db->query($sql);
 	}
 
+		public function editar(){
+		$db= new mysqli("localhost",'root','','novox');
+		$id=$this->id;
+		$rut=$this->rut;
+		$nombre=$this->nombre;
+		$cliente_id=$this->cliente_id;
+		$sql=" UPDATE `responsable` set nombre = '$nombre' ,rut = '$rut', cliente_id='$cliente_id' where id = '$id'";
+			echo $db->query($sql);
+
+	}
+
+	public function eliminar(){
+			$db = new mysqli("localhost", 'root','','novox');
+			$id = $this->id;
+			echo $sql=" DELETE FROM responsable where id = $id";
+			$db->query($sql);
+		}
+
 
 }
 

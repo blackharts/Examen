@@ -30,7 +30,7 @@
       while($reg= mysqli_fetch_object($result)){
        
  ?>
-    <tr>
+    <tr scope="row">
     
       <td><?=$reg->rut?></td>
       <td><?=$reg->nombre?></td>
@@ -43,8 +43,8 @@
       <td><?=$reg->credito?></td>
       <td><?=$reg->venta?></td> 
       <td>
-        <a href= "?url=persona_editar&id=<?=$reg->id?>" class="btn btn-outline-primary bt_editar"> Editar </a>
-        <button  type="button" class="btn btn-outline-danger bt_eliminar" client.id ="<?=$reg->id?>">Eliminar</button>
+        <a href= "?url=xx&id=<?=$reg->id?>" class="btn btn-outline-primary btn-sm bt_editar"> Editar </a>
+        <button  type="button" class="btn btn-outline-danger btn-sm bt_eliminar" client.id ="<?=$reg->id?>">Eliminar</button>
       
       </td>
     </tr>
