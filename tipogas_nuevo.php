@@ -24,7 +24,7 @@
                     data: $("#formulario").serialize(),
                     success: function (data) {
                         alert(data);
-
+                         location.reload();
 
                     },
                     error: function (data) {

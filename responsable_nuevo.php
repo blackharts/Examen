@@ -27,7 +27,7 @@
 
            $.ajax({
                   type: "POST",
-                  url: "Views/lista_cliente.php?",
+                  url: "Views/cmb_cliente.php?",
                   success: function(response)
                   {
                       $('#cliente_id').html(response);
@@ -43,6 +43,7 @@
                         alert("Agregado correctamente!");
                         $('input').val("");
                         $('select').val("");
+                        location.reload();
                     },
                     error: function (data) {
                         alert("Ha ocurrido un error!");

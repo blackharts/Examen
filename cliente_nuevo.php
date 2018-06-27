@@ -55,7 +55,7 @@
 
            $.ajax({
                   type: "POST",
-                  url: "Views/lista_ciudad.php?",
+                  url: "Views/cmb_ciudad.php?",
                   success: function(response)
                   {
                       $('#ciudad_id').html(response);

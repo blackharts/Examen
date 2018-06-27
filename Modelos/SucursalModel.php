@@ -16,7 +16,7 @@
 			$sucursal->editar();
 		}elseif ($action == 'eliminar') {
 			$id = $_POST['id'];
-			$sucursal = new Sucursal($id,'');
+			$sucursal = new Sucursal($id,'','','');
 			$sucursal->eliminar();
 		}
 

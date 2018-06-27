@@ -49,5 +49,6 @@ class Sucursal
         echo "Se Han editado los Datos";
 
     }
+}
 
 ?>

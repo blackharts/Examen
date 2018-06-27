@@ -50,6 +50,8 @@ class Cliente
 		echo "Se Han Guardado los Datos";
 	}
 
+	
+
 }
 
 ?>

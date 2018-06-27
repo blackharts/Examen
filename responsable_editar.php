@@ -25,7 +25,7 @@
       
     </select>
   </div>
-
+  <input type="hidden" name="id" value="<?=$reg->id?>">
  <button type="button" class="btn btn-outline-primary offset-sm-1" id="bt_guardar" required>Guardar</button>
 
 </form>
@@ -36,7 +36,7 @@
 
            $.ajax({
                   type: "POST",
-                  url: "Views/lista_cliente.php?",
+                  url: "Views/cmb_cliente.php?",
                   success: function(response)
                   {
                       $('#cliente_id').html(response);

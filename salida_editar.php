@@ -73,7 +73,7 @@
 
           $.ajax({
                   type: "POST",
-                  url: "Views/lista_user.php?",
+                  url: "Views/cmb_user.php?",
                   success: function(response)
                   {
                       $('#user_id').html(response);
@@ -82,7 +82,7 @@
 
            $.ajax({
                   type: "POST",
-                  url: "Views/lista_sucursal.php?",
+                  url: "Views/cmb_sucursal.php?",
                   success: function(response)
                   {
                       $('#sucursal_id').html(response);
@@ -90,7 +90,7 @@
           });
             $.ajax({
                   type: "POST",
-                  url: "Views/lista_cliente.php?",
+                  url: "Views/cmb_cliente.php?",
                   success: function(response)
                   {
                       $('#cliente_id').html(response);
@@ -98,7 +98,7 @@
           });
              $.ajax({
                   type: "POST",
-                  url: "Views/lista_tipogas.php?",
+                  url: "Views/cmb_tipogas.php?",
                   success: function(response)
                   {
                       $('#tipogas_id').html(response);
@@ -106,7 +106,7 @@
           });
               $.ajax({
                   type: "POST",
-                  url: "Views/lista_tiposalida.php?",
+                  url: "Views/cmb_tiposalida.php?",
                   success: function(response)
                   {
                       $('#tiposalida_id').html(response);
@@ -114,7 +114,7 @@
           });
                $.ajax({
                   type: "POST",
-                  url: "Views/lista_responsable.php?",
+                  url: "Views/cmb_responsable.php?",
                   success: function(response)
                   {
                       $('#responsable_id').html(response);

@@ -43,7 +43,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="?url=Views/clientes_listados">
+                <a class="nav-link active" href="?url=Views/lista_cliente">
                   <span data-feather="home"></span>
                   Listar Cliente <span class="sr-only"> </span>
                 </a>
@@ -55,7 +55,7 @@
                 </a>
               </li>
                <li class="nav-item">
-                <a class="nav-link active" href="?url=Views/responsable_listado">
+                <a class="nav-link active" href="?url=Views/lista_responsable">
                   <span data-feather="home"></span>
                   Listar Responsable <span class="sr-only"> </span>
                 </a>
@@ -73,7 +73,7 @@
                 </a>
               </li>
                <li class="nav-item">
-                <a class="nav-link active" href="?url=Views/tipo_gas_listado">
+                <a class="nav-link active" href="?url=Views/lista_tipogas">
                   <span data-feather="home"></span>
                   Listar Tipo de Gas <span class="sr-only"> </span>
                 </a>
@@ -85,7 +85,7 @@
                 </a>
               </li>
                 <li class="nav-item">
-                <a class="nav-link active" href="?url=Views/vista_salidas">
+                <a class="nav-link active" href="?url=Views/lista_salidas">
                   <span data-feather="home"></span>
                   Listar Salida <span class="sr-only"> </span>
                 </a>
